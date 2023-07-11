@@ -1,8 +1,6 @@
 on:
   schedule:
-    - cron: "0 */12 * * *"
-  push:
-    branches: [main]
+    - cron: "*/5 * * * *"
     
 jobs:
   scrape-products:
@@ -26,10 +24,11 @@ jobs:
         
     - name: Run scraper
       run: |
-        scrapy crawl daraz_products -O products.json
+        scrapy crawl daraz_products
         
-    - name: Publish product catalog
-      uses: actions/upload-artifact@v3.1.2
-      with:
-        name: product-catalog
-        path: products.json
+    - name: Push Updated Catalog
+      run: |
+        git config --global user.name "Scraper Bot"
+        git config --global user.email "scraperbot@aars.me"
+        git commit -a -m "Product history update"
+        git push
