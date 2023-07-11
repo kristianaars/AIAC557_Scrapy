@@ -17,6 +17,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    
+    - name: Setup Playwright Browsers
+      uses: maxmilton/action-setup-playwright@v1.0.6
+      with:
+        browsers: chromium
+        headless: true
         
     - name: Run scraper
       run: |
