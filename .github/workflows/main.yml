@@ -20,7 +20,7 @@ jobs:
         
     - name: Run scraper
       run: |
-        scrapy crawl daraz_product -O products.json
+        scrapy crawl daraz_products -O products.json
         
     - name: Publish product catalog
       uses: actions/upload-artifact@v3.1.2
