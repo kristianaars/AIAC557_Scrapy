@@ -28,6 +28,7 @@ jobs:
         
     - name: Push Updated Catalog
       run: |
+        git add products.csv
         git config --global user.name "Scraper Bot"
         git config --global user.email "scraperbot@aars.me"
         git commit -a -m "Product history update"
