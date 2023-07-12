@@ -27,6 +27,7 @@ jobs:
         scrapy crawl daraz_products
         
     - name: Push Updated Catalog
+    - uses: actions/checkout@v3
       run: |
         git add products.csv
         git config --global user.name "Scraper Bot"
