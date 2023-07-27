@@ -8,7 +8,7 @@ import chompjs
 class DarazProductSpider(scrapy.Spider):
     name = "daraz_products"
     current_page = 1
-    baseurl = "https://www.daraz.com.np/mens-sneakers/"
+    baseurl = "https://www.daraz.com.np/mens-fashion/"
 
     def start_requests(self):
         yield scrapy.Request(url=self.baseurl,
