@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "21 */1 * * *"
+    - cron: "21 */12 * * *"
     
 jobs:
   scrape-products:
