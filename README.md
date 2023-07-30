@@ -28,4 +28,4 @@ The scraper does the following:
 
 All product prices are appended to [products.csv](./products.csv]).
 
-This pipeline is automatically triggered by GitHub actions every hour, which then adds new entries to [products.csv](./products.csv]).
+This pipeline is automatically triggered by GitHub actions every 12 hours, which then adds new entries to [products.csv](./products.csv]).
